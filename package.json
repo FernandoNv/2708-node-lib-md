@@ -2,9 +2,13 @@
   "name": "2708-node-lib-md",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npx tsc && node dist/app.js",
+    "start:valid": "npx tsc && node dist/app.js --valid"
   },
   "repository": {
     "type": "git",
@@ -16,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/alura-cursos/2708-node-lib-md/issues"
   },
-  "homepage": "https://github.com/alura-cursos/2708-node-lib-md#readme"
+  "homepage": "https://github.com/alura-cursos/2708-node-lib-md#readme",
+  "dependencies": {
+    "chalk": "5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "typescript": "^5.3.3"
+  }
 }
